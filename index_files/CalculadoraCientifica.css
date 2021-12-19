@@ -1,0 +1,137 @@
+/* Especificidad: 001 */
+html{
+    background-color: #F3F1F1;
+    
+}
+/* Especificidad: 001 */
+
+body{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main";
+}
+/* Especificidad: 001 */
+
+header{
+    grid-area: header;
+    text-align: center;
+}
+/* Especificidad: 001 */
+
+footer{
+    padding-top: 0.5em;
+}
+/* Especificidad: 001 */
+
+p{
+    text-align: center;
+}
+/* Especificidad: 001 */
+form{
+    grid-area: main;
+    margin: auto;
+    background-color: #AFAFAF;
+
+}
+/* Especificidad: 001 */
+
+form{
+    display: grid;
+    gap:1em;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(8, 1fr);
+    
+    padding: 0.5em;
+
+}
+
+/* Especificidad: 012 */
+form>input:nth-of-type(1){
+    color: black;
+    pointer-events: none;
+    border: none;
+    outline:none;
+    display:block;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    white-space: nowrap;
+    resize: none;
+    grid-column-start:1 ;
+    grid-column-end:  span 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: #AFAFAF;
+    text-align: right;
+}
+/* Especificidad: 001 */
+aside{
+    grid-column-start: 2;
+    grid-column-end:  6;
+    grid-row-start: 3;
+
+
+}
+
+aside>input:nth-of-type(1){
+    width:3.75em;
+    height:1.875em;
+    background-color: #AFAFAF;
+    color: black;
+    font-size: 0.75em;
+
+
+}
+
+
+/* Especificidad: 011 */
+input[type=submit]
+{
+    width:7.5em;
+    height:3em;
+    
+    display:block;
+    background-color:gray;
+    border: none;
+    outline:none;
+    
+}
+
+/* Especificidad: 012 */
+form>input:nth-of-type(24),  input:nth-of-type(25),input:nth-of-type(26),
+input:nth-of-type(29),  input:nth-of-type(30), input:nth-of-type(31),
+input:nth-of-type(34),input:nth-of-type(35), input:nth-of-type(36), input:nth-of-type(40){
+    background-color: white;
+} 
+/* Especificidad: 002 */
+form > input{
+    margin: 0.2em;
+    text-align: center;
+    border-radius: 0.1em;
+    font-size: 1.25em;
+    
+}
+/* Especificidad: 011 */
+input[type=text] {
+    background: #86F292;
+    color: red;
+    font-size: 1.875em;
+    text-align: right;
+    padding: 1.875em ;
+
+}
+
+/* Especificidad: 012 */
+form>input:nth-of-type(2),  input:nth-of-type(3),input:nth-of-type(4),
+input:nth-of-type(5), input:nth-of-type(6), input:nth-of-type(7){
+    width:3.75em;
+    height:1.875em;
+    background-color: #AFAFAF;
+    color: black;
+    font-size: 0.75em;
+}
+/* Especificidad: 001 */
+label{
+    display: none;
+}
+
